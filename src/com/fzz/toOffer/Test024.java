@@ -7,7 +7,7 @@ public class Test024 {
         int val;
         ListNode next;
         ListNode(int x) {
-            val = x; 
+            val = x;
         }
     }
 
