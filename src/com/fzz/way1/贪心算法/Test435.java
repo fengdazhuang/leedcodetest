@@ -1,4 +1,4 @@
-package com.fzz.way1.no1;
+package com.fzz.way1.贪心算法;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -37,6 +37,7 @@ class Solution435 {
                 num++;
             }else{
                 back=intervals[i][1];
+
             }
         }
         return num;

@@ -1,4 +1,4 @@
-package com.fzz.way1.no1;
+package com.fzz.way1.贪心算法;
 
 public class Test605 {
     public static void main(String[] args) {

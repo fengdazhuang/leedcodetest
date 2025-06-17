@@ -1,4 +1,4 @@
-package com.fzz.way1.no1;
+package com.fzz.way1.贪心算法;
 /*
 输入：points = [[10,16],[2,8],[1,6],[7,12]]
 输出：2
@@ -10,6 +10,7 @@ package com.fzz.way1.no1;
 
 import java.util.Arrays;
 import java.util.Comparator;
+
 
 public class Test452 {
 
@@ -89,6 +90,7 @@ class Solution452 {
 
         return sum;*/
 
+        //排序 + 贪心
         if(points.length==1){
             return 1;
         }

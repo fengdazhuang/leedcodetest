@@ -31,7 +31,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class Solution104 {
     public int maxDepth(TreeNode root) {
         if(root==null) return 0;
         else{
@@ -96,7 +96,7 @@ public class Test104 {
         while ((line = in.readLine()) != null) {
             TreeNode root = stringToTreeNode(line);
 
-            int ret = new Solution().maxDepth(root);
+            int ret = new Solution104().maxDepth(root);
 
             String out = String.valueOf(ret);
 
