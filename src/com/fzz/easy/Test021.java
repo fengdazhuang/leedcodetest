@@ -25,35 +25,38 @@ class ListNode {
     }
 }
 
+
+/**
+ * 思路：
+ * 定义一个新链表，遍历两个链表，每次比较大小，小的优先加入链表，同时移动该链表指针和新链表指针
+ */
 class Solution21 {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        if(list1==null) return list2;
-        if(list2==null) return list1;
-        ListNode p = list1;
-        ListNode q = list2;
+        if (list1 == null) return list2;
+        if (list2 == null) return list1;
         ListNode newList;
         ListNode temp;
-        if(p.val>q.val){
-            temp=newList=new ListNode(q.val);
-            q=q.next;
-        }else{
-            temp=newList=new ListNode(p.val);
-            p=p.next;
+        if (list1.val > list2.val) {
+            temp = newList = new ListNode(list2.val);
+            list2 = list2.next;
+        } else {
+            temp = newList = new ListNode(list1.val);
+            list1 = list1.next;
         }
-        while(p!=null&&q!=null){
-            if(p.val<=q.val){
-                temp.next=p;
-                p=p.next;
-            }else {
-                temp.next=q;
-                q=q.next;
+        while (list1 != null && list2 != null) {
+            if (list1.val <= list2.val) {
+                temp.next = list1;
+                list1 = list1.next;
+            } else {
+                temp.next = list2;
+                list2 = list2.next;
             }
-            temp=temp.next;
+            temp = temp.next;
         }
-        if(p==null){
-            temp.next=q;
-        }else{
-            temp.next=p;
+        if (list1 == null) {
+            temp.next = list2;
+        } else {
+            temp.next = list1;
         }
         return newList;
     }
